@@ -7,7 +7,7 @@ const port = process.env.PORT || 3000;
 app.use(express.static('app'));
 
 app.get('/', function(req, res) {
-  res.render('index.html');
+  res.render('index');
 });
 
 app.listen(port, function() {
