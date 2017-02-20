@@ -1,4 +1,4 @@
-module.exports = [
+let picsAndDescs = [
   {
     header: "Derp",
     imgurl: "./img/feelingderpy.png",
@@ -10,3 +10,5 @@ module.exports = [
     description: "When I'm feeling smug"
   }
 ];
+
+module.exports = picsAndDescs;
