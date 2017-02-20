@@ -30,13 +30,13 @@ if (production) {
 }
 
 module.exports = {
-  entry: `${__dirname}/index.js`,
+  entry: `${__dirname}/main.js`,
   debug: !production,
   devTool: production ? false : 'eval',
   plugins: plugins,
   output: {
-    path: 'build',
-    filename: 'bundle.js'
+    path: './',
+    filename: 'index.js'
   },
   postcss: function() {
     return [autoprefixer];
@@ -54,6 +54,15 @@ module.exports = {
       {
         test: /\.scss$/,
         loader: ExtractText.extract('style', 'css!postcss!sass!')
+      },
+      {
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+
+        query: {
+          presets: ['es2015', 'react']
+        }
       },
       {
         test: /\.html$/,

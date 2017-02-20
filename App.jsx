@@ -5,7 +5,7 @@ class App extends React.Component {
     return (
       <div>
         <h1>{this.props.header}</h1>
-        <img src="{this.props.imgurl}" />
+        <img src={this.props.imgurl}></img>
         <p>{this.props.description}</p>
       </div>
     );
@@ -20,7 +20,7 @@ App.propTypes = {
 
 App.defaultProps = {
   header: "Placeholder header",
-  imgurl: "http://placekitten.com/200/300",
+  imgurl: "http://www.placekitten.com/300/400",
   description: "In the meantime, enjoy a kitty!"
 }
 
