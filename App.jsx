@@ -5,7 +5,7 @@ class App extends React.Component {
     return (
       <div>
         <h1>{this.props.header}</h1>
-        <img src="{this.props.imgurl}">
+        <img src="{this.props.imgurl}" />
         <p>{this.props.description}</p>
       </div>
     );
@@ -13,9 +13,9 @@ class App extends React.Component {
 }
 
 App.propTypes = {
-  header: React.PropTypes.string;
-  imgurl: React.PropTypes.string;
-  description: React.PropTypes.string;
+  header: React.PropTypes.string,
+  imgurl: React.PropTypes.string,
+  description: React.PropTypes.string
 }
 
 App.defaultProps = {
